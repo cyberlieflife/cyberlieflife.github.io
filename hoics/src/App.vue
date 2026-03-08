@@ -5,8 +5,7 @@
         <p class="eyebrow">Hearts of Iron IV Code Studio</p>
         <h1>HOICS</h1>
         <p class="lead">
-          一个面向 HOI4 Mod 开发的现代化工作台，目标是把项目管理、脚本编辑、资料整理与 AI
-          辅助放进同一个流畅界面里。
+          一个使用Tauri+ Vue 的面向 HOI4 Mod 开发的现代化非Vscode分支IDE，目标是可视化编程与直接代码共存的HOI4 Mod编写。
         </p>
 
         <div class="hero-actions">
@@ -31,16 +30,18 @@
             <div class="mock-pill">Docs</div>
           </div>
           <div class="mock-editor">
-            <div class="mock-file">common / ideas / industry.txt</div>
-            <pre>idea_category = {
-  industrial_push = {
-    picture = industrial_push
-    modifier = {
-      production_factory_max_efficiency_factor = 0.05
-      industrial_capacity_factory = 0.1
-    }
-  }
-}</pre>
+            <div class="mock-file">common / bop / RSC_BOP.txt</div>
+            <pre>RSC_KDR_bop = {
+	initial_value = 0.5
+	left_side = RSC_build_side
+	right_side = RSC_science_side
+	decision_category = RSC_KDR_bop_category
+	
+	range = {
+		id = mid_range
+		min = -0.25
+		max = 0.25
+	</pre>
           </div>
         </div>
       </div>
@@ -49,28 +50,28 @@
     <section id="features" class="section">
       <div class="section-heading">
         <p class="eyebrow">核心方向</p>
-        <h2>让 HOI4 Mod 开发更顺手</h2>
+        <h2>让 HOI4 Mod 开发更快速</h2>
       </div>
 
       <div class="feature-grid">
         <article class="feature-card">
-          <h3>项目工作台</h3>
-          <p>围绕 Mod 项目组织目录、配置、依赖与常用入口，减少在文件夹和工具之间来回切换。</p>
+          <h3>依赖项</h3>
+          <p>面向Sub Mod开发者与本地化翻译，快速查找原Mod内容或.yml文件以校对或更改。</p>
         </article>
 
         <article class="feature-card">
-          <h3>脚本编辑体验</h3>
-          <p>面向 Paradox 脚本语境设计的编辑与预览能力，让修改、检查和定位问题更直接。</p>
+          <h3>预览支持</h3>
+          <p>以Vscode插件为参考的将预览功能从需要单独查找插件下载移植为内置组件，支持国策/MIO/科技树/事件关系/地图/特殊格式图片/gfx预览。</p>
         </article>
 
         <article class="feature-card">
-          <h3>文档与资料整合</h3>
-          <p>把常用规则、说明和开发资料收在同一界面里，写脚本时不用频繁切屏检索。</p>
+          <h3>国策预览和编辑</h3>
+          <p>让你可以在国策预览界面快速的增删国策和修改国策，同时自动抓取本地化文件并显示本地化内容。</p>
         </article>
 
         <article class="feature-card">
-          <h3>AI 辅助开发</h3>
-          <p>为规划、问答、代码生成和任务拆解预留统一入口，后续会逐步完善接线与交互体验。</p>
+          <h3>语法补全/模板插入</h3>
+          <p>索引依赖项，项目内，游戏本体的Tag和Idea和关键字进行语法补全，同时允许你在特定文件夹内插入模板以快速填充编写Mod。</p>
         </article>
       </div>
     </section>
@@ -80,17 +81,16 @@
         <p class="eyebrow">当前状态</p>
         <h2>还在持续迭代</h2>
         <p>
-          HOICS 现在更像一个正在成形的开发平台：基础界面和部分能力已经落地，更多高级特性会继续补完。
+          HOICS 仍旧在更新与修复新BUG 同时我们欢迎您发起issue PR 或讨论以改进HOICS。
         </p>
       </div>
 
       <div class="split-card">
         <p class="eyebrow">下一步</p>
         <ul class="roadmap-list">
-          <li>整理官网内容与下载入口</li>
-          <li>补充截图、演示和路线图</li>
-          <li>继续打磨 AI 与编辑器相关体验</li>
-          <li>完善对 HOI4 Mod 工作流的支持</li>
+          <li>国际化......</li>
+          <li>完善错误提示和语法补全......</li>
+          <li>完善扩展功能......</li>
         </ul>
       </div>
     </section>
