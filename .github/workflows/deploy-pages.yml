@@ -36,9 +36,13 @@ jobs:
 
       - name: Build site
         working-directory: hoics
-        env:
-          GITHUB_ACTIONS: 'true'
         run: npm run build
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p site/hoics
+          cp index.html site/index.html
+          cp -r hoics/dist/* site/hoics/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -46,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: hoics/dist
+          path: site
 
   deploy:
     environment:
