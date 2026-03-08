@@ -104,9 +104,14 @@
         </p>
       </div>
 
-      <a class="button primary" href="https://github.com/cyberlieflife/HOI4-Code-Studio" target="_blank" rel="noreferrer">
-        前往仓库
-      </a>
+      <div class="cta-actions">
+        <a class="button primary" href="https://github.com/cyberlieflife/HOI4-Code-Studio" target="_blank" rel="noreferrer">
+          前往仓库
+        </a>
+        <a class="button secondary" href="https://github.com/cyberlieflife/HOI4-Code-Studio/releases/latest" target="_blank" rel="noreferrer">
+          前往下载
+        </a>
+      </div>
     </section>
   </div>
 </template>
